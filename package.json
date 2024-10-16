@@ -25,5 +25,8 @@
     "typescript": "^5"
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "resolutions": {
+    "@coinbase/wallet-sdk": "npm:@lukasrosario/wallet-sdk@4.1.0-beta.2"
+  }
 }

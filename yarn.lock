@@ -34,17 +34,15 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@coinbase/wallet-sdk@4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@coinbase/wallet-sdk/-/wallet-sdk-4.0.4.tgz#634cd89bac93eeaf381a1f026476794e53431ed6"
-  integrity sha512-74c040CRnGhfRjr3ArnkAgud86erIqdkPHNt5HR1k9u97uTIZCJww9eGYT67Qf7gHPpGS/xW8Be1D4dvRm63FA==
+"@coinbase/wallet-sdk@4.0.4", "@coinbase/wallet-sdk@npm:@lukasrosario/wallet-sdk@4.1.0-beta.2":
+  version "4.1.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@lukasrosario/wallet-sdk/-/wallet-sdk-4.1.0-beta.2.tgz#35b91fe4085549f973342dd974a735d7c41e0656"
+  integrity sha512-64rL/e0W5ODM17/aR1f325h/LnSvYe9XmWObwGZqs/xzQhaI8ARBSo8o715jQ3DpxesS8Ob75YQW5DvQR0iyPQ==
   dependencies:
-    buffer "^6.0.3"
+    "@noble/hashes" "^1.4.0"
     clsx "^1.2.1"
     eventemitter3 "^5.0.1"
-    keccak "^3.0.3"
     preact "^10.16.0"
-    sha.js "^2.4.11"
 
 "@emotion/hash@^0.9.0":
   version "0.9.2"
