@@ -12,7 +12,8 @@ const config = createConfig({
   chains: [base],
   connectors: [
     coinbaseWallet({
-      appName: process.env.NEXT_PUBLIC_ONCHAINKIT_PROJECT_NAME,
+      appName: 'My OnchainKit App',
+      appLogoUrl: 'https://avatars.githubusercontent.com/u/108554348?v=4',
       preference: process.env.NEXT_PUBLIC_ONCHAINKIT_WALLET_CONFIG as
         | 'smartWalletOnly'
         | 'all',
