@@ -84,7 +84,7 @@ export default function App() {
               className="w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
             />
           </div>
-          <Pay productId={productId} isSponsored>
+          <Pay key={productId} productId={productId} isSponsored>
             <PayButton coinbaseBranded />
             <PayStatus />
           </Pay>
