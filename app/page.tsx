@@ -1,5 +1,6 @@
 'use client';
 
+import React, { useState } from 'react';
 import {
   ConnectWallet,
   ConnectWalletText,
@@ -20,26 +21,11 @@ import ArrowSvg from './svg/ArrowSvg';
 import ImageSvg from './svg/Image';
 import OnchainkitSvg from './svg/OnchainKit';
 
-const components = [
-  {
-    name: 'Transaction',
-    url: 'https://onchainkit.xyz/transaction/transaction',
-  },
-  { name: 'Swap', url: 'https://onchainkit.xyz/swap/swap' },
-  { name: 'Pay', url: 'https://onchainkit.xyz/pay/pay' },
-  { name: 'Wallet', url: 'https://onchainkit.xyz/wallet/wallet' },
-];
-
-const templates = [
-  { name: 'NFT', url: 'https://github.com/coinbase/onchain-app-template' },
-  {
-    name: 'Commerce',
-    url: 'https://github.com/coinbase/onchain-commerce-template',
-  },
-  { name: 'Fund', url: 'https://github.com/fakepixels/fund-component' },
-];
-
 export default function App() {
+  const [productId, setProductId] = useState(
+    '842e3c7d-1b7a-480e-9a5b-dabc52bae448'
+  );
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <header className="pt-4 pr-4">
@@ -83,7 +69,22 @@ export default function App() {
           <div className="flex justify-center mb-6">
             <OnchainkitSvg className="text-blue-600" />
           </div>
-          <Pay productId="842e3c7d-1b7a-480e-9a5b-dabc52bae448" isSponsored>
+          <div className="mb-4">
+            <label
+              htmlFor="productId"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Product ID:
+            </label>
+            <input
+              type="text"
+              id="productId"
+              value={productId}
+              onChange={(e) => setProductId(e.target.value)}
+              className="w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+            />
+          </div>
+          <Pay productId={productId} isSponsored>
             <PayButton coinbaseBranded />
             <PayStatus />
           </Pay>
